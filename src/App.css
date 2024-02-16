@@ -1,0 +1,140 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.header-search {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 900px;
+  border: 2px solid var(--primary-600);
+  border-radius: 1.5rem;
+}
+.header-search-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 1.3rem;
+}
+.header-search-item:not(:last-child) {
+  border-bottom: 2px solid var(--primary-600);
+}
+.header-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  position: absolute;
+}
+.header-icon__btn {
+  color: var(--primary-600);
+  background-color: #fff;
+  cursor: pointer;
+}
+.location-icon {
+  color: var(--rose-500);
+}
+.date-icon {
+  color: var(--primary-700);
+}
+.header-search-input {
+  /* padding: 0.7rem 0.5rem; */
+  font-size: 1rem;
+  padding-left: 1.5rem;
+}
+.date-drop-down {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  padding-left: 1.5rem;
+}
+.header-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-600);
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  margin: auto;
+}
+.seperator {
+  display: none;
+  width: 1px;
+  height: 30px;
+  background-color: var(--text-400);
+  margin: 0 1rem;
+}
+
+@media (min-width: 760px) {
+  .header-search {
+    grid-template-columns: 1fr 1fr 2fr 80px;
+  }
+
+  .header-search-item:not(:last-child) {
+    border-bottom: none;
+  }
+  .header-search-btn {
+    margin: 0;
+  }
+
+  .seperator {
+    display: inline-block;
+  }
+}
+
+.guest-options {
+  background-color: #fff;
+  box-shadow: 0 0 10px #efefef;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--text-100);
+  position: absolute;
+  top: 2rem;
+  width: 220px;
+  z-index: 1000;
+}
+.guest-option-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.guest-option-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.guest-option-item span,
+.guest-option-item button {
+  display: inline-block;
+}
+
+.guest-option-item .option-counter-btn {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--text-600);
+  background-color: var(--text-100);
+}
+.option-text {
+  display: inline-block;
+  flex: 1;
+  font-size: 0.9rem;
+}
+.option-counter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* date range */
+.date {
+  position: absolute;
+  top: 40px;
+  left: 0rem;
+  z-index: 1002;
+}
+@media (min-width: 760px) {
+  .date {
+    top: 50px;
+    left: -5rem;
+  }
+}
