@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  max-width: 900px;
+  max-width: 1024px;
   border: 2px solid var(--primary-600);
   border-radius: 1.5rem;
 }
@@ -125,7 +125,7 @@
   align-items: center;
   gap: 1rem;
 }
-/* date range */
+/* ------- date range ----- */
 .date {
   position: absolute;
   top: 40px;
@@ -137,4 +137,107 @@
     top: 50px;
     left: -5rem;
   }
+}
+
+/* -------------------- Location List --------- */
+.nearby-location{
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+.nearby-location h2{
+  margin-bottom: 1rem;
+}
+.location-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.location-item img{
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.location-item-desc > :not(:last-child){
+  margin-bottom: 0.2rem;
+}
+
+.location-item .location-item-desc .name{
+  color: var(--text-400);
+}
+.location-item .location-item-desc .location{
+  font-weight:500;
+}
+.location-item .location-item-desc .price{
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.location-item .location-item-desc .price span{
+  color: var(--text-400);
+  font-weight: 400;
+}
+
+/* ------- app layout --------- */
+.app-layout{
+  max-width: 1024px;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 130px);
+  align-items: stretch;
+}
+.sidebar{
+  width: 35%;
+  overflow-y: scroll;
+  padding-right: 1rem;
+}
+
+@media (min-width:768px){
+  .sidebar{
+    width: 50%;
+  }
+}
+
+/* ----- map -------- */
+
+.search-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-list .search-item{
+  display: flex;
+  /* justify-content:center; */
+  gap:1rem ;
+}
+
+.search-list .search-item img{
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.search-item .search-item-desc p{
+  margin-bottom: 0.3rem;
+}
+
+.search-item .search-item-desc .name{
+  color: var(--text-400);
+}
+
+.search-item .search-item-desc .location{
+  font-weight: 500;
+}
+.search-item .search-item-desc .price{
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.search-item .search-item-desc .price span{
+  color: var(--text-400);
+  font-weight: 400;
 }
