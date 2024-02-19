@@ -6,11 +6,12 @@ import LocationList from './components/Locationlist/LocationList'
 import { Route, Routes } from 'react-router-dom'
 import AppLayout from './components/AppLayout/AppLayout'
 import Hotels from './components/Hotels/Hotels'
+import HotelProvider from './components/Context/HotelProvider'
 
 function App() {
 
   return (
-    <>
+    <HotelProvider>
       <Toaster/>
       <Header/>
       <Routes>
@@ -21,7 +22,7 @@ function App() {
         </Route>
       </Routes>
       
-    </>
+    </HotelProvider>
   )
 }
 
