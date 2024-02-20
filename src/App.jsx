@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import AppLayout from './components/AppLayout/AppLayout'
 import Hotels from './components/Hotels/Hotels'
 import HotelProvider from './components/Context/HotelProvider'
+import SingelHotel from './components/SingelHotel/SingelHotel'
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<LocationList/>} />
         <Route path='/hotels' element={<AppLayout/>}>
           <Route index element={<Hotels/>}/>
-          <Route path=':id' element={<div>single hotel</div>}/>
+          <Route path=':id' element={<SingelHotel/>}/>
         </Route>
       </Routes>
       
