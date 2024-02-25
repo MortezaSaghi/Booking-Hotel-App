@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Map from "../Map/Map";
-import { useHotels } from "../Context/HotelProvider";
+import { useBookmark } from "../Context/BookmarkProvider";
 
 
-export default function AppLayout() {
-  const {hotels} = useHotels()
+export default function BookMarksLayout() {
+  const {bookmarks} = useBookmark();
   return (
     <div className="app-layout">
         <div className="sidebar"><Outlet/></div>
-        <Map markerLocation={hotels}/>
+        <Map markerLocation={bookmarks}/>
     </div>
   )
 }

@@ -298,3 +298,64 @@ button.get-location{
   object-fit: cover;
   border-radius: 0.8rem;
 }
+
+/* --- bookmark section ----- */
+
+.bookmark-list{
+  margin-top: 1rem;
+}
+.bookmark-item{
+  margin-bottom: 1rem;
+  border: 1px solid var(--text-400);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+.bookmark-item.current-bookmark{
+  border:2px solid var(--primary-600);
+  background-color: var(--text-100);
+}
+
+/* --------- form --------- */
+.form .form-control{
+  margin-bottom: 1rem;
+  position: relative;
+}
+.form-control label{
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.form-control input{
+  border:1px solid var(--text-400);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  min-width: 5rem;
+}
+.btn--back {
+  border: 1px solid var(--text-400);
+}
+.btn--primary{
+  background-color: var(--primary-600);
+  color: var(--text-100);
+  
+}
+.mt-1{
+  margin-top: 1rem;
+}
+.form-control .flag{
+  position: absolute;
+  right: 1rem;
+  top: 1.9rem;
+}
