@@ -60,7 +60,21 @@ export default function BookmarkProvider({ children }) {
     }
   }
 
-  return <BookmarkContext.Provider value={{createBookmark ,isLoading , bookmarks ,getBookmark ,currentBookmark }}>{children}</BookmarkContext.Provider>;
+  async function deleteBookmark(id){
+    setIsLoading(true);
+    try {
+        const {data} = await axios.delete(`${BASE_URL}/bookmarks/${id}`)
+        setBookmarks(pre=>pre.filter((item)=>item.id !== id));
+        
+    } catch (err) {
+      toast.error(err.message);
+      
+    }finally{
+      setIsLoading(false)
+    }
+  }
+
+  return <BookmarkContext.Provider value={{deleteBookmark,createBookmark ,isLoading , bookmarks ,getBookmark ,currentBookmark }}>{children}</BookmarkContext.Provider>;
 }
 
 export function useBookmark() {
