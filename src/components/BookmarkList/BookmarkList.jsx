@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function BookmarkList() {
   const { bookmarks, isLoadig ,currentBookmark } = useBookmark();
-  if (isLoadig) <div>Loading Bookmark list ...</div>;
-    console.log(currentBookmark);
+  if (isLoadig || !bookmarks) <div>Loading Bookmark list ...</div>;
+    // console.log(currentBookmark);
   return (
     <div>
       <h2>Bookmark List</h2>
