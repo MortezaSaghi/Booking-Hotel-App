@@ -1323,5 +1323,42 @@
       ]
     }
   ],
-  "bookmarks": []
+  "bookmarks": [
+    {
+      "cityName": "Oberelsbach",
+      "country": "Germany",
+      "countryCode": "DE",
+      "latitude": "50.44526214970796",
+      "longitude": "10.063719974968024",
+      "host_location": "Oberelsbach Germany",
+      "id": 3
+    },
+    {
+      "cityName": "Dury",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "50.258180978954",
+      "longitude": "3.010378733156691",
+      "host_location": "Dury France",
+      "id": 5
+    },
+    {
+      "cityName": "Creteil",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "48.76750451502841",
+      "longitude": "2.4393892552327583",
+      "host_location": "Creteil France",
+      "id": 6
+    },
+    {
+      "cityName": "Jebrat al Sheikh District",
+      "country": "Sudan (the)",
+      "countryCode": "SD",
+      "latitude": "15.88737600990871",
+      "longitude": "31.823596279825285",
+      "host_location": "Jebrat al Sheikh District Sudan (the)",
+      "id": 9
+    }
+  ]
 }
